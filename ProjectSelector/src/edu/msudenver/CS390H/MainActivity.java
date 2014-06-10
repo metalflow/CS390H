@@ -2,6 +2,7 @@ package edu.msudenver.CS390H;
 
 import android.app.*;
 import android.os.*;
+import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
@@ -13,13 +14,16 @@ public class MainActivity extends Activity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Log.i("MainActivity_OnCreate", "On create finished");
     }
 	
 	public void executeInClass0604 (View view){
-		//do nothing yet
+		Log.i("MainActivity_executeInClass0604", "button pressed");
 	}
 	
 	public void executeAssignment1 (View view){
-		//do nothing yet
+		Log.i("MainActivity_executeAssignment1", "button pressed");
 	}
+	
+	
 }
