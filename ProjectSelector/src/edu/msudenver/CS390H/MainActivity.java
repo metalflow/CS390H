@@ -14,4 +14,12 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
+	
+	public void executeInClass0604 (View view){
+		//do nothing yet
+	}
+	
+	public void executeAssignment1 (View view){
+		//do nothing yet
+	}
 }
