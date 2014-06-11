@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center"
+    android:onClick="updateColor"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -12,27 +13,29 @@
 
         <NumberPicker
             android:id="@+id/redNumberPicker"
-            android:layout_width="92dp"
-            android:layout_height="128dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="updateColor" />
 
         <NumberPicker
             android:id="@+id/greenNumberPicker"
-            android:layout_width="92dp"
-            android:layout_height="128dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="updateColor"
             android:orientation="vertical" />
 
         <NumberPicker
             android:id="@+id/blueNumberPicker"
-            android:layout_width="92dp"
-            android:layout_height="128dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="updateColor" />
+
     </LinearLayout>
 
-    <SurfaceView
-        android:id="@+id/colorView"
-        android:layout_width="260dp"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/contentDesciption_ColorViewer"
-        android:onClick="updateColor" />
+    <ImageView
+        android:id="@+id/DrawingImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" />
 
 </LinearLayout>
