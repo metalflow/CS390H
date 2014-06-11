@@ -3,8 +3,13 @@
 
     <string name="hello">This screen is used to select the different activities or fragments I have created for my Summer 2014 CS390H class</string>
     <string name="app_name">ProjectSelector</string>
+    <string name="app_description">Project Selector for my work in CS390H</string>
 	<string name="text_inClass0604">Work done in class on 0604</string>
+	<string name="name_inClass0604">InClass0604</string>
 	<string name="text_assignment1">Color Picker for assignment 1</string>	
 	<string name="My_First_Button">Button for 0604 in class work</string>	
+	<string name="label_assignment1">Color Picker</string>	
+	<string name="description_assignment1">3 number pickers which assign RGB values to a display box</string>	
+	<string name="contentDesciption_ColorViewer">Displays the color selected by the 3 number pickers when clicked</string>	
 	
 </resources>

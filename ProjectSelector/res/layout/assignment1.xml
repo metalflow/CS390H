@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/NumberPickerHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <NumberPicker
+            android:id="@+id/redNumberPicker"
+            android:layout_width="92dp"
+            android:layout_height="128dp" />
+
+        <NumberPicker
+            android:id="@+id/greenNumberPicker"
+            android:layout_width="92dp"
+            android:layout_height="128dp"
+            android:orientation="vertical" />
+
+        <NumberPicker
+            android:id="@+id/blueNumberPicker"
+            android:layout_width="92dp"
+            android:layout_height="128dp" />
+    </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/colorView"
+        android:layout_width="260dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/contentDesciption_ColorViewer"
+        android:onClick="updateColor" />
+
+</LinearLayout>

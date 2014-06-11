@@ -5,10 +5,11 @@
     android:versionName="1.0" >
 
     <uses-sdk 
-        android:minSdkVersion="8" 
-        android:targetSdkVersion="11" />
+        android:minSdkVersion="14" 
+        android:targetSdkVersion="19" />
 
     <application
+        android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
@@ -20,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="InClass0604Activity" android:label="@string/name_inClass0604" android:description="@string/text_inClass0604"></activity>
+        <activity android:label="@string/label_assignment1" android:description="@string/description_assignment1" android:name="assignment1Activity"></activity>
     </application>
 
 </manifest>

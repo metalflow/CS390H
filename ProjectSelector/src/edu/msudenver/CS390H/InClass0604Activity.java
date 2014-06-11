@@ -2,6 +2,7 @@ package edu.msudenver.CS390H;
 
 import android.app.*;
 import android.os.*;
+import android.util.Log;
 import android.view.*;
 import android.widget.*;
 
@@ -27,6 +28,6 @@ public class InClass0604Activity extends Activity
 	}
 
 	public void selfDestruct(View view) {
-		// Kabloey
+		Log.i("InClass0604_selfDestruct", "button pressed");
 	}
 }
