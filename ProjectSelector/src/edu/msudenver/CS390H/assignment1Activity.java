@@ -27,6 +27,22 @@ public class assignment1Activity extends Activity {
 		greenNP = (NumberPicker) findViewById(R.id.greenNumberPicker);
 		blueNP = (NumberPicker) findViewById(R.id.blueNumberPicker);
 
+		OnValueChangeListener colorValueChangeListener = new OnValueChangeListener() {
+			@Override
+			public void onValueChange(NumberPicker picker, int oldVal,
+									  int newVal) {
+				Bitmap bitmap = Bitmap.createBitmap((int) getWindowManager()
+													.getDefaultDisplay().getWidth(),
+													(int) getWindowManager().getDefaultDisplay()
+													.getHeight(), Bitmap.Config.ARGB_8888);
+				Canvas canvas = new Canvas(bitmap);
+				drawingImageView.setImageBitmap(bitmap);
+
+				canvas.drawRGB(redNP.getValue(), greenNP.getValue(),
+							   blueNP.getValue());
+			}
+		};
+		
 		redNP.setMinValue(0);
 		redNP.setMaxValue(255);
 		greenNP.setMinValue(0);
@@ -54,52 +70,10 @@ public class assignment1Activity extends Activity {
 		float bottomy = bitmap.getHeight();
 
 		canvas.drawRect(leftx, topy, rightx, bottomy, paint);
-
-		redNP.setOnValueChangedListener(new OnValueChangeListener() {
-			@Override
-			public void onValueChange(NumberPicker picker, int oldVal,
-					int newVal) {
-				Bitmap bitmap = Bitmap.createBitmap((int) getWindowManager()
-						.getDefaultDisplay().getWidth(),
-						(int) getWindowManager().getDefaultDisplay()
-								.getHeight(), Bitmap.Config.ARGB_8888);
-				Canvas canvas = new Canvas(bitmap);
-				drawingImageView.setImageBitmap(bitmap);
-
-				canvas.drawRGB(redNP.getValue(), greenNP.getValue(),
-						blueNP.getValue());
-			}
-		});
-		greenNP.setOnValueChangedListener(new OnValueChangeListener() {
-			@Override
-			public void onValueChange(NumberPicker picker, int oldVal,
-					int newVal) {
-				Bitmap bitmap = Bitmap.createBitmap((int) getWindowManager()
-						.getDefaultDisplay().getWidth(),
-						(int) getWindowManager().getDefaultDisplay()
-								.getHeight(), Bitmap.Config.ARGB_8888);
-				Canvas canvas = new Canvas(bitmap);
-				drawingImageView.setImageBitmap(bitmap);
-
-				canvas.drawRGB(redNP.getValue(), greenNP.getValue(),
-						blueNP.getValue());
-			}
-		});
-		blueNP.setOnValueChangedListener(new OnValueChangeListener() {
-			@Override
-			public void onValueChange(NumberPicker picker, int oldVal,
-					int newVal) {
-				Bitmap bitmap = Bitmap.createBitmap((int) getWindowManager()
-						.getDefaultDisplay().getWidth(),
-						(int) getWindowManager().getDefaultDisplay()
-								.getHeight(), Bitmap.Config.ARGB_8888);
-				Canvas canvas = new Canvas(bitmap);
-				drawingImageView.setImageBitmap(bitmap);
-
-				canvas.drawRGB(redNP.getValue(), greenNP.getValue(),
-						blueNP.getValue());
-			}
-		});
+		
+		redNP.setOnValueChangedListener(colorValueChangeListener);
+		greenNP.setOnValueChangedListener(colorValueChangeListener);
+		blueNP.setOnValueChangedListener(colorValueChangeListener);
 
 		Log.i("Assignemtn1_OnCreate", "On create finished");
 
@@ -114,4 +88,7 @@ public class assignment1Activity extends Activity {
 
 		canvas.drawRGB(redNP.getValue(), greenNP.getValue(), blueNP.getValue());
 	}
+	
 }
+
+
