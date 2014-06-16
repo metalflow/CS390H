@@ -31,5 +31,9 @@ public class MainActivity extends Activity
 		startActivity(launchProjectIntent);
 	}
 	
-	
+	public void executeAssignment2 (View view){
+		Log.i("MainActivity_executeAssignment2", "button pressed");
+		launchProjectIntent = new Intent(this, Assignment2Activity.class);
+		startActivity(launchProjectIntent);
+	}
 }

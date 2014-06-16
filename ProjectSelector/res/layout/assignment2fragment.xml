@@ -1,0 +1,8 @@
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textDisplay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:contentDescription="@string/ContentDescription_textDisplay"
+    android:inputType="none"
+    android:text="textDisplayString" />
+

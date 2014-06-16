@@ -11,5 +11,8 @@
 	<string name="label_assignment1">Color Picker</string>	
 	<string name="description_assignment1">3 number pickers which assign RGB values to a display box</string>	
 	<string name="contentDesciption_ColorViewer">Displays the color selected by the 3 number pickers when clicked</string>	
+	<string name="text_assignement2button">Assignment 2</string>	
+	<string name="hint_assignment2button">Fragments and inter-fragment commonunication</string>	
+	<string name="ContentDescription_textDisplay">A text box for displaying content</string>	
 	
 </resources>
