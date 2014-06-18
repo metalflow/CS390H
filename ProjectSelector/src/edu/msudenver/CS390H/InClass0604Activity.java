@@ -4,7 +4,6 @@ import android.app.*;
 import android.os.*;
 import android.util.Log;
 import android.view.*;
-import android.widget.*;
 
 public class InClass0604Activity extends Activity
 {

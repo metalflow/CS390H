@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.*;
 import android.util.Log;
 import android.view.*;
-import android.widget.*;
 
 public class MainActivity extends Activity
 {

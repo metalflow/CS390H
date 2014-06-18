@@ -14,5 +14,6 @@
 	<string name="text_assignement2button">Assignment 2</string>	
 	<string name="hint_assignment2button">Fragments and inter-fragment commonunication</string>	
 	<string name="ContentDescription_textDisplay">A text box for displaying content</string>	
+	<string name="title_assignment2_menuoption_back">Go back to the picture list</string>
 	
 </resources>

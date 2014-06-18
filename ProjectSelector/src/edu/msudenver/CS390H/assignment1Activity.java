@@ -3,12 +3,10 @@ package edu.msudenver.CS390H;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.TextureView.SurfaceTextureListener;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.NumberPicker.OnValueChangeListener;
-import android.view.*;
 import android.graphics.*;
 
 public class assignment1Activity extends Activity {
