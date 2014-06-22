@@ -35,5 +35,14 @@
 	    android:hint="@string/hint_assignment2button"
 	    android:onClick="executeAssignment2"
 	    android:text="@string/text_assignement2button" />
+
+	<Button
+	    android:id="@+id/colorblenderbutton"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:hint="@string/hint_colorblenderbutton"
+	    android:onClick="executeColorBlender"
+	    android:text="@string/text_colorblenderbutton" />
 	
 </LinearLayout>

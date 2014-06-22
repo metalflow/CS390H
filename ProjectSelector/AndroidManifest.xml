@@ -24,6 +24,7 @@
         <activity android:name="InClass0604Activity" android:label="@string/name_inClass0604" android:description="@string/text_inClass0604"></activity>
         <activity android:label="@string/label_assignment1" android:description="@string/description_assignment1" android:name="assignment1Activity"></activity>
         <activity android:label="@string/hint_assignment2button" android:name="Assignment2Activity"></activity>
-    </application>
+		<activity android:label="@string/hint_colorblenderbutton" android:name="ColorBlenderActivity"></activity>
+		</application>
 
 </manifest>
