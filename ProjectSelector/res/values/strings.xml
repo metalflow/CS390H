@@ -17,5 +17,6 @@
 	<string name="title_assignment2_menuoption_back">Go back to the picture list</string>
 	<string name="text_colorblenderbutton">ColorBlender</string>	
 	<string name="hint_colorblenderbutton">An application which requests colors from the ColorPicker and has a slider to blend between them</string>	
+	<string name="description_ColorBlenderActivity">A program which uses a slider to blend two colors</string>	
 	
 </resources>
