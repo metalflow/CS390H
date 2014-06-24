@@ -29,15 +29,6 @@ public class assignment1Activity extends Activity {
 		passedIntent = getIntent();
 		data = passedIntent.getData();
 
-		if (passedIntent != null) {
-			if (passedIntent.getType().equals("number/integer")) {
-				intentFlag = true;
-			} else {
-				Log.i("Assignemtn1_OnCreate", "bad MIME type recieved");
-				onStop();
-			}
-		}
-
 		redNP = (NumberPicker) findViewById(R.id.redNumberPicker);
 		greenNP = (NumberPicker) findViewById(R.id.greenNumberPicker);
 		blueNP = (NumberPicker) findViewById(R.id.blueNumberPicker);
@@ -64,6 +55,13 @@ public class assignment1Activity extends Activity {
 		greenNP.setMaxValue(255);
 		blueNP.setMinValue(0);
 		blueNP.setMaxValue(255);
+		
+		if (passedIntent != null) {
+			intentFlag = true;
+			redNP.setValue(Color.red(passedIntent.getIntExtra("CURRENT_COLOR", 0)));
+			greenNP.setValue(Color.green(passedIntent.getIntExtra("CURRENT_COLOR", 0)));
+			blueNP.setValue(Color.blue(passedIntent.getIntExtra("CURRENT_COLOR", 0)));
+	}
 
 		drawingImageView = (ImageView) this.findViewById(R.id.DrawingImageView);
 		Bitmap bitmap = Bitmap.createBitmap((int) getWindowManager()
@@ -99,7 +97,7 @@ public class assignment1Activity extends Activity {
 		super.onStop();
 
 		passedIntent.putExtra(
-				"COLOR",
+				"COLOR_PICKED",
 				Color.rgb(redNP.getValue(), greenNP.getValue(),
 						blueNP.getValue()));
 		setResult(Activity.RESULT_OK, passedIntent);
@@ -117,7 +115,7 @@ public class assignment1Activity extends Activity {
 
 		if (intentFlag) {
 			passedIntent.putExtra(
-					"COLOR",
+					"COLOR_PICKED",
 					Color.rgb(redNP.getValue(), greenNP.getValue(),
 							blueNP.getValue()));
 			setResult(Activity.RESULT_OK, passedIntent);

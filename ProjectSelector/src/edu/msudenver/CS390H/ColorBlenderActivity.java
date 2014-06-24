@@ -25,6 +25,7 @@ public class ColorBlenderActivity extends Activity {
 	private int rightColor;
 	private int blendedColor;
 	private colorSliderListener sliderListener = new colorSliderListener();
+	private int leftPercent = 100;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -66,11 +67,11 @@ public class ColorBlenderActivity extends Activity {
 		int color = data.getIntExtra("COLOR_PICKED", 0);
 
 		if (resultCode != RESULT_OK) {
-			Log.i("ColorBlenderActivity_onActivityResult", "ColorPicker returned error code:"
-					+ resultCode);
+			Log.i("ColorBlenderActivity_onActivityResult",
+					"ColorPicker returned error code:" + resultCode);
 			return;
 		}
-		
+
 		switch (requestCode) {
 		case LEFT:
 			leftView.setBackgroundColor(color);
@@ -87,18 +88,25 @@ public class ColorBlenderActivity extends Activity {
 					"invalid requestCode recieved:" + requestCode);
 			break;
 		}
+
+		leftColor = getColor(leftView);
+		rightColor = getColor(rightView);
+		blendedColor = blendColor(100 - leftPercent, leftColor, rightColor);
+		blendedView.setBackgroundColor(blendedColor);
 	}
 
 	public void setRightColor(View view) {
 		launchProjectIntent = new Intent(this, assignment1Activity.class);
-		startActivity(launchProjectIntent);
+		launchProjectIntent.putExtra("CURRENT_COLOR", rightColor);
+		startActivityForResult(launchProjectIntent, RIGHT);
+		Log.i("ColorBlenderActivity_setLeftColor", "setLeftColor finished");
 		Log.i("ColorBlenderActivity_setRightColor", "setRightColor finished");
 	}
 
 	public void setLeftColor(View view) {
-		Uri data = Uri.withAppendedPath(Uri.EMPTY, "COLOR").;
-		launchProjectIntent = new Intent("COLOR_PICK", data, this.getApplicationContext().getApplicationContext(), assignment1Activity.class);
-		startActivity(launchProjectIntent);
+		launchProjectIntent = new Intent(this, assignment1Activity.class);
+		launchProjectIntent.putExtra("CURRENT_COLOR", leftColor);
+		startActivityForResult(launchProjectIntent, LEFT);
 		Log.i("ColorBlenderActivity_setLeftColor", "setLeftColor finished");
 	}
 
@@ -108,8 +116,10 @@ public class ColorBlenderActivity extends Activity {
 	}
 
 	private int blendColor(int rightPercent, int left, int right) {
-		Log.i("ColorBlenderActivity_blendColor", "left:" + left);
-		Log.i("ColorBlenderActivity_blendColor", "right:" + right);
+		/*
+		 * Log.i("ColorBlenderActivity_blendColor", "left:" + left);
+		 * Log.i("ColorBlenderActivity_blendColor", "right:" + right);
+		 */
 
 		int leftRed = Color.red(left);
 		int leftBlue = Color.blue(left);
@@ -117,16 +127,19 @@ public class ColorBlenderActivity extends Activity {
 		int rightRed = Color.red(right);
 		int rightBlue = Color.blue(right);
 		int rightGreen = Color.green(right);
-		int leftPercent = 100 - rightPercent;
+		leftPercent = 100 - rightPercent;
 
-		Log.i("ColorBlenderActivity_blendColor", "leftRed:" + leftRed);
-		Log.i("ColorBlenderActivity_blendColor", "leftBlue:" + leftBlue);
-		Log.i("ColorBlenderActivity_blendColor", "leftGreen:" + leftGreen);
-		Log.i("ColorBlenderActivity_blendColor", "leftPercent:" + leftPercent);
-		Log.i("ColorBlenderActivity_blendColor", "rightRed:" + rightRed);
-		Log.i("ColorBlenderActivity_blendColor", "rightBlue:" + rightBlue);
-		Log.i("ColorBlenderActivity_blendColor", "rightGreen:" + rightGreen);
-		Log.i("ColorBlenderActivity_blendColor", "rightPercent:" + rightPercent);
+		/*
+		 * Log.i("ColorBlenderActivity_blendColor", "leftRed:" + leftRed);
+		 * Log.i("ColorBlenderActivity_blendColor", "leftBlue:" + leftBlue);
+		 * Log.i("ColorBlenderActivity_blendColor", "leftGreen:" + leftGreen);
+		 * Log.i("ColorBlenderActivity_blendColor", "leftPercent:" +
+		 * leftPercent); Log.i("ColorBlenderActivity_blendColor", "rightRed:" +
+		 * rightRed); Log.i("ColorBlenderActivity_blendColor", "rightBlue:" +
+		 * rightBlue); Log.i("ColorBlenderActivity_blendColor", "rightGreen:" +
+		 * rightGreen); Log.i("ColorBlenderActivity_blendColor", "rightPercent:"
+		 * + rightPercent);
+		 */
 
 		return Color.rgb(
 				(leftRed * leftPercent + rightRed * rightPercent) / 100,
@@ -141,12 +154,13 @@ public class ColorBlenderActivity extends Activity {
 			blendedColor = blendColor(progress, leftColor, rightColor);
 			blendedView.setBackgroundColor(blendedColor);
 			blendedView.invalidate();
-			Log.i("ColorBlenderActivity_onProgressChanged",
-					"onProgressChanged finished");
-			Log.i("ColorBlenderActivity_onProgressChanged", "blendedColor:"
-					+ blendedColor);
-			Log.i("ColorBlenderActivity_onProgressChanged", "progress:"
-					+ progress);
+			/*
+			 * Log.i("ColorBlenderActivity_onProgressChanged",
+			 * "onProgressChanged finished");
+			 * Log.i("ColorBlenderActivity_onProgressChanged", "blendedColor:" +
+			 * blendedColor); Log.i("ColorBlenderActivity_onProgressChanged",
+			 * "progress:" + progress);
+			 */
 		}
 
 		@Override

@@ -31,16 +31,16 @@ public class InClass0623Activity extends Activity
 			
 			
 			switch (move.getAction()) {
-				case move.ACTION_POINTER_DOWN :
+				case MotionEvent.ACTION_POINTER_DOWN :
 					actionType = "Pointer Down";
 					break;
-				case move.ACTION_DOWN :
+				case MotionEvent.ACTION_DOWN :
 					actionType = "Down";
 					break;
-				case move.ACTION_UP :
+				case MotionEvent.ACTION_UP :
 					actionType = "Up";
 					break;
-				case move.ACTION_MOVE :
+				case MotionEvent.ACTION_MOVE :
 					actionType = "Move";
 					break;
 					default:
