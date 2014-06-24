@@ -40,4 +40,10 @@ public class MainActivity extends Activity
 		launchProjectIntent = new Intent(this, ColorBlenderActivity.class);
 		startActivity(launchProjectIntent);
 	}
+	public void executeInClass0623 (View view){
+		Log.i("MainActivity_executeInClass0623", "button pressed");
+		launchProjectIntent = new Intent(this, InClass0623Activity.class);
+		startActivity(launchProjectIntent);
+	}
+	
 }

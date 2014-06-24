@@ -18,5 +18,7 @@
 	<string name="text_colorblenderbutton">ColorBlender</string>	
 	<string name="hint_colorblenderbutton">An application which requests colors from the ColorPicker and has a slider to blend between them</string>	
 	<string name="description_ColorBlenderActivity">A program which uses a slider to blend two colors</string>	
+	<string name="text_inClass0623">Work done in class on 06/23</string>
+	<string name="name_inClass0623">InClass0623</string>
 	
 </resources>

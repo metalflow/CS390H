@@ -44,6 +44,12 @@
         </activity>
         <activity android:name="ColorBlenderActivity" >
         </activity>
-    </application>
-
+		<activity
+			android:name="InClass0623Activity"
+			android:description="@string/text_inClass0623"
+			android:label="@string/name_inClass0623" >
+		</activity>
+		
+		</application>
+	
 </manifest>

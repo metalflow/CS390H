@@ -45,4 +45,12 @@
 	    android:onClick="executeColorBlender"
 	    android:text="@string/text_colorblenderbutton" />
 	
+	<Button
+	    android:id="@+id/button_inClass0623"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:onClick="executeInClass0623"
+	    android:text="@string/text_inClass0604" />
+	
 </LinearLayout>
