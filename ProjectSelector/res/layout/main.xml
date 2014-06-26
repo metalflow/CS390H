@@ -51,6 +51,14 @@
 	    android:layout_height="wrap_content"
 	    android:layout_weight="1"
 	    android:onClick="executeInClass0623"
-	    android:text="@string/text_inClass0604" />
+	    android:text="@string/text_inClass0623" />
+
+	<Button
+	    android:id="@+id/button_inClass0625"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:onClick="executeInClass0625"
+	    android:text="@string/text_inClass0625" />
 	
 </LinearLayout>

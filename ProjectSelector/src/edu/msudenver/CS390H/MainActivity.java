@@ -45,5 +45,10 @@ public class MainActivity extends Activity
 		launchProjectIntent = new Intent(this, InClass0623Activity.class);
 		startActivity(launchProjectIntent);
 	}
+	public void executeInClass0625 (View view){
+		Log.i("MainActivity_executeInClass0625", "button pressed");
+		launchProjectIntent = new Intent(this, InClass0625Activity.class);
+		startActivity(launchProjectIntent);
+	}
 	
 }

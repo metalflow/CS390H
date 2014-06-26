@@ -49,6 +49,11 @@
 			android:description="@string/text_inClass0623"
 			android:label="@string/name_inClass0623" >
 		</activity>
+		<activity
+			android:name="InClass0625Activity"
+			android:description="@string/text_inClass0625"
+			android:label="@string/name_inClass0625" >
+		</activity>
 		
 		</application>
 	
