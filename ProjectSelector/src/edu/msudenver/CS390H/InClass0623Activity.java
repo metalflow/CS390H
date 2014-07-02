@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.*;
 import android.content.Context;
 import android.widget.Toast;
-import android.text.*;
 
 public class InClass0623Activity extends Activity
 {	

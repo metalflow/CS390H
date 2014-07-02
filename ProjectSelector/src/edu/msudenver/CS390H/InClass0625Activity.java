@@ -6,7 +6,7 @@ import android.util.Log;
 import android.hardware.*;
 import android.content.Context;
 import java.util.List;
-import android.view.View;
+//import android.view.View;
 import android.widget.*;
 import android.graphics.Color;
 
@@ -15,7 +15,7 @@ public class InClass0625Activity extends Activity implements SensorEventListener
 	private SensorManager mSensorManager;
 	private List <Sensor> deviceSensors;
 	private TextView readout;
-	private View visualizer;
+	//private View visualizer;
 	private Sensor mSensor;
 	private float[] gravityValues;
 	
@@ -26,7 +26,7 @@ public class InClass0625Activity extends Activity implements SensorEventListener
         setContentView(R.layout.inclass0625);
 	
 		readout = (TextView) findViewById(R.id.readoutView);
-		visualizer = findViewById(R.id.visualResponseView);
+		//visualizer = findViewById(R.id.visualResponseView);
 		mSensorManager  = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 		deviceSensors = mSensorManager.getSensorList(Sensor.TYPE_ALL);
 		

@@ -2,7 +2,7 @@ package edu.msudenver.CS390H;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
+//import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +18,6 @@ public class assignment1Activity extends Activity {
 	private static NumberPicker blueNP = null;
 	private static ImageView drawingImageView = null;
 	private boolean intentFlag = false;
-	private Uri data;
 	private Intent passedIntent;
 
 	@Override
@@ -27,7 +26,7 @@ public class assignment1Activity extends Activity {
 		setContentView(R.layout.assignment1);
 
 		passedIntent = getIntent();
-		data = passedIntent.getData();
+		//Uri data = passedIntent.getData();
 
 		redNP = (NumberPicker) findViewById(R.id.redNumberPicker);
 		greenNP = (NumberPicker) findViewById(R.id.greenNumberPicker);

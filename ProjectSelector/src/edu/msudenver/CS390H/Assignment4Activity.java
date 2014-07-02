@@ -11,7 +11,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
+//import android.view.View;
 import android.widget.TextView;
 
 public class Assignment4Activity extends Activity implements SensorEventListener 
@@ -20,7 +20,6 @@ public class Assignment4Activity extends Activity implements SensorEventListener
 	private SensorManager mSensorManager;
 	private List <Sensor> deviceSensors;
 	private TextView readout;
-	private View visualizer;
 	private Sensor mSensor;
 	private float[] gravityValues;
 	
@@ -31,7 +30,7 @@ public class Assignment4Activity extends Activity implements SensorEventListener
         setContentView(R.layout.assignment4activity);
 	
 		readout = (TextView) findViewById(R.id.readoutView);
-		visualizer = findViewById(R.id.visualResponseView);
+		//View visualizer = findViewById(R.id.visualResponseView);
 		mSensorManager  = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 		deviceSensors = mSensorManager.getSensorList(Sensor.TYPE_ALL);
 		
