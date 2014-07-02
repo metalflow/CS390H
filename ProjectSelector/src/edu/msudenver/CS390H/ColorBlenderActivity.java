@@ -1,12 +1,10 @@
 package edu.msudenver.CS390H;
 
-import java.net.URI;
 
 import android.app.*;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.*;
 import android.util.Log;
 import android.view.*;
